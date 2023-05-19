@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+</head>
+<header>
+
+     <div class="logo">
+        <a href="/">
+        <img height="60px/" src="../static/pools/img/sunflower-flower-svgrepo-com.svg" width=60" alt="">
+        </a>
+    </div>
+
+    <header class="header sticky sticky--top js-header">
+
+        <div class="grid">
+
+            <nav class="navigation">
+                <ul class="navigation__list navigation__list--inline">
+                    <li class="http://127.0.0.1:8000/"><a href="http://127.0.0.1:8000/"
+                                                          class="navigation__link navigation__link--is-active">На
+                        главную</a>
+                    </li>
+                    <li class="/apathy"><a href="/apathy" class="navigation__link">Апатия</a></li>
+                    <li class="/sadness"><a href="/sadness" class="navigation__link">Грусть/Хандра</a></li>
+                    <li class="/procrastination"><a href="/procrastination" class="navigation__link">Прокрастинация</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            </div>
+
+        </header>
+
+    <div class="logo">
+        <a href="/"></a>
+        <ing src="mysite/pools/images/index/sunflower-flower-svgrepo-com.svg" width=60" height="60px/">
+            </ing>
+    </div>
+
+        <div class="overlay">
+            <h1>"Мир далек от идеала, но стоит поискать возможности смириться с этим" </h1>
+            <h3>- Безделье и лень это двигатель прогресса, при условии, что мы способны хитрить, по этой причине я не вижу смысла возводить это в ранг человеческого порока - </h3>
+            <p>Этот сайт - миниатрюрный источник помощи на случай самодиагнострирвоания у себя прокрастинации, апатии, или сплин...</p>
+            <br>
+        </div>
+    </header>
+
+<body class="content">
+    </body>
+<div>
+    <a href="/procrastination" class="btn">нажми на меня, если ты балуешься прокрастинацией</a>
+    <a href="/apathy" class="btn">тебе сюда, если тебя беспокоит апатия</a>
+    <a href="/sadness" class="btn">не хмурь брови от грусти, и нажми на меня</a>
+</div>
+
+<footer>
+    <ul>
+        <li><a href="/products">О проекте</a></li>
+        <li><a href="/services">Польза</a></li>
+        <li><a href="/contacts">Где можно нас найти?</a></li>
+    </ul>
+
+    <div class="tel>">
+        <a href="tel:89001324657">+8 (900) 132 46 57</a>
+
+    </div>
+</footer>
+</html>
+
+<style>
+
+    body {
+        background-color: wheat;
+        padding: 15px 0;
+    }
+.btn {
+        text-decoration: none;
+        color: #6b5770;
+        background-image: linear-gradient(90deg, #fd7f34, #bd155b);
+        display: inline-block;
+        padding: 14px 30px;
+        border: 1px solid;
+        position: relative;
+        z-index: 0;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin: 0 15px 15px 0;
+        outline: none;
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+        touch-action: manipulation;
+    }
+
+    .btn:before {
+        content: '';
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background: linear-gradient(90deg, #fd7f34, #bd155b);
+        z-index: -2;
+        transition: .4s;
+        border-radius: 5px;
+    }
+
+    .btn:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #fff, #fff);
+        z-index: -1;
+        transition: .4s;
+        border-radius: 4px;
+    }
+
+    .btn:hover {
+        color: #fff;
+        transition: .3s;
+    }
+
+    .btn:hover:after {
+        background: linear-gradient(90deg, #fd7f34, #bd155b);
+    }
+
+    .btn:active:after {
+        background: linear-gradient(90deg, #d96d2d, #760f3a);
+    }
+
+    .btn:focus-visible {
+        box-shadow: 0 0 0 3px #fd7f34;
+    }
+
+    .btn:disabled {
+        pointer-events: none;
+    }
+
+    .btn:disabled:before {
+        filter: grayscale(100%);
+    }
+
+body.content {
+    background-color: wheat;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+/* helpers/grid.css */
+
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 48em;
+}
+
+/* helpers/sticky.css */
+
+.sticky {
+  position: sticky;
+  will-change: transform;
+}
+
+.sticky--top {
+  top: 0;
+}
+
+/* layout/base.css */
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.75;
+  margin: 0;
+  min-block-size: 100vh;
+}
+
+/* layout/header.css */
+
+.header {
+  background-color: burlywood;
+  padding-block: 1em;
+}
+
+
+.header::after {
+  bottom: 0;
+  box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, 0.3);
+  content: '';
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.header.is-active::after {
+  opacity: 1;
+}
+
+/* layout/main.css */
+
+
+/* modules/headline.css */
+
+h1 {
+  margin-block: 0 0.5em;
+}
+
+/* modules/navigation.css */
+
+.navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list--inline {
+  display: flex;
+  gap: 1.5em;
+}
+
+.navigation__link {
+  color: inherit;
+  display: block;
+  padding-inline: 1em;
+  text-decoration: none;
+}
+
+.navigation__link--is-active {
+  background-color: black;
+  border-radius: 999em;
+  color: #fff;
+}
+
+/* modules/paragraph.css */
+
+p {
+    padding-block: 1.5em;
+    }
+
+</style>
